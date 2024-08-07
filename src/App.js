@@ -23,8 +23,9 @@ function App() {
 
         <Routes>
           <Route path= "/" element={<Home></Home>}/>
-          <Route path= "/egypt" element={<EgyptPage></EgyptPage>}/>
-          <Route path= "/dragon" element={<EgyptPage></EgyptPage>}/>
+          <Route path= "/Casino" element={<Home></Home>}/>
+          <Route path= "/Casino/egypt" element={<EgyptPage></EgyptPage>}/>
+          <Route path= "/Casino/dragon" element={<EgyptPage></EgyptPage>}/>
 
         </Routes>
       </Router>
