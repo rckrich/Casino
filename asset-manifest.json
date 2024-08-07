@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Casino/static/css/main.f855e6bc.css",
+    "main.js": "/Casino/static/js/main.252e8e88.js",
+    "index.html": "/Casino/index.html",
+    "main.f855e6bc.css.map": "/Casino/static/css/main.f855e6bc.css.map",
+    "main.252e8e88.js.map": "/Casino/static/js/main.252e8e88.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.252e8e88.js"
+  ]
+}
