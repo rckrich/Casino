@@ -6,15 +6,10 @@ import { Home } from "./pages/Home";
 
 import '../src/App.css';
 
-import { NavBar } from "./components/NavBar";
-import { useLocation } from 'react-router-dom'
-
-
 
 function App() {
 
   console.log("v0.3")
-  console.log(useLocation().pathname)
   return (
     
     <div className="">
