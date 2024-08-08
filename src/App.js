@@ -13,7 +13,7 @@ import { NavBar } from "./components/NavBar";
 
 function App() {
 
-
+  console.log("v0.2")
   
   return (
     
