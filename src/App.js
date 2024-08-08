@@ -1,33 +1,25 @@
 
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { EgyptPage } from "./pages/EgyptPage";
-import { DragonPage } from "./pages/DragonPage";
-import { Home } from "./pages/Home";
-
-import '../src/App.css';
-
-
+import { useState, useEffect } from "react";
+import React from "react";
+import { Unity, useUnityContext } from "react-unity-webgl";
+import { UnityHandler } from "./components/UnityHandler";
 
 function App() {
 
-  console.log("v0.5")
+  const [identifier, setIdentifier] = useState(0);
+
   return (
-    
-    <div className="">
+    <div style={{display: "flex", flexDirection: "column", padding: "10px"}}> 
       
-      <Router>
+      <button onClick={() => setIdentifier(1)}> Egypt</button>
+      <button onClick={() => setIdentifier(2)}> Dragones</button>
+      <UnityHandler identifier={identifier}>
+      </UnityHandler>
 
-        <Routes>
-          <Route path= "/" element={<Home></Home>}/>
-          <Route path= "/Casino" element={<Home></Home>}/>
-          <Route path= "/Casino/egypt" element={<EgyptPage></EgyptPage>}/>
-          <Route path= "/Casino/dragon" element={<EgyptPage></EgyptPage>}/>
 
-        </Routes>
-      </Router>
-      
-    </div>
-  );
+  </div>
+  )
+  
 }
 
 export default App;
