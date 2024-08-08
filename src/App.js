@@ -10,7 +10,7 @@ import '../src/App.css';
 
 function App() {
 
-  console.log("v0.4")
+  console.log("v0.5")
   return (
     
     <div className="">
