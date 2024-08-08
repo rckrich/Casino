@@ -7,9 +7,10 @@ import { Home } from "./pages/Home";
 import '../src/App.css';
 
 
+
 function App() {
 
-  console.log("v0.3")
+  console.log("v0.4")
   return (
     
     <div className="">

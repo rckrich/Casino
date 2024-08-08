@@ -5,10 +5,10 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 export const EgyptPage = () => {
 
     const { unityProvider } = useUnityContext({
-    loaderUrl: "Egypt/build/myunityapp.loader.js",
-    dataUrl: "Egypt/build/myunityapp.data",
-    frameworkUrl: "Egypt/build/myunityapp.framework.js",
-    codeUrl: "Egypt/build/myunityapp.wasm",
+    loaderUrl: "Casino/egypt/build/myunityapp.loader.js",
+    dataUrl: "Casino/egypt/build/myunityapp.data",
+    frameworkUrl: "Casino/egypt/build/myunityapp.framework.js",
+    codeUrl: "Casino/egypt/build/myunityapp.wasm",
   });
 
     return (
