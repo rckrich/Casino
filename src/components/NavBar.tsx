@@ -1,0 +1,71 @@
+import { useState } from "react";
+import { Navbar, Nav, Container, Dropdown, DropdownButton } from "react-bootstrap";
+import logo from '../img/RCK Logo.png';
+
+import { EgyptBuild } from "./EgyptBuild";
+import { DragonBuild } from "./DragonBuild";
+
+
+export const NavBar = () => {
+
+
+  const [activeBuild, setActiveBuild] = useState(0);
+
+    let element  
+
+
+    if(activeBuild === 0) {
+        element = <div></div>
+    }
+    if(activeBuild === 1) {
+        element = <EgyptBuild></EgyptBuild>
+    }
+    if(activeBuild === 2) {
+        element = <DragonBuild></DragonBuild>
+    }
+  
+
+  return (
+    <div >
+    <div style={{width: 'auto', height: 'auto', justifyContent: 'center', alignItems: 'center', display: "flex", flexDirection: "row"}}>
+
+      <Navbar expand="md" style={{backgroundColor: "black"}} >
+        <Container  >
+          <Navbar.Brand>
+            <img src={logo} style={{width: "100px", height: "auto"}} alt="Logo" />
+          </Navbar.Brand>
+          <h2 style={{color: "white", paddingTop: "20px"}}>Casino Demo</h2>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span className="navbar-toggler-icon"></span>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+            </Nav>
+            <Nav className="ms-auto">
+              <DropdownButton  variant ={"secondary"} title="Games">
+                <Dropdown.Item href="#/action-1" onClick={() => setActiveBuild(1)}>Egypt</Dropdown.Item>
+                <Dropdown.Item href="#/action-2" onClick={() => setActiveBuild(2)}>Dragon</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                </DropdownButton>
+            </Nav>
+            <span className="navbar-text">
+              <div className="social-icon">
+              </div>
+                  <button
+                        type="button" 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.href='https://rckgames.com';
+                          }}
+                    > Check our HomePage</button>
+            </span>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
+      <div style={{display: "flex", justifyContent: "center"}}> {element} </div>
+
+    
+    </div>
+  )
+}
