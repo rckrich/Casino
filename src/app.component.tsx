@@ -82,7 +82,7 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Crate Clicker!</h1>
+      <h1>RCK</h1>
       <div className={styles.unityWrapper}>
         {isLoaded === false && (
           <div className={styles.loadingBar}>
