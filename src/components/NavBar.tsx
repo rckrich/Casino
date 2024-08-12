@@ -2,28 +2,12 @@ import { useState } from "react";
 import { Navbar, Nav, Container, Dropdown, DropdownButton } from "react-bootstrap";
 import logo from '../img/RCK Logo.png';
 
-import { EgyptBuild } from "./EgyptBuild";
-import { DragonBuild } from "./DragonBuild";
-
+import { UnityHandler } from "./UnityHandler";
 
 export const NavBar = () => {
 
 
   const [activeBuild, setActiveBuild] = useState(0);
-
-    let element  
-
-
-    if(activeBuild === 0) {
-        element = <div></div>
-    }
-    if(activeBuild === 1) {
-        element = <EgyptBuild></EgyptBuild>
-    }
-    if(activeBuild === 2) {
-        element = <DragonBuild></DragonBuild>
-    }
-  
 
   return (
     <div >
@@ -63,7 +47,7 @@ export const NavBar = () => {
         </Container>
       </Navbar>
     </div>
-      <div style={{display: "flex", justifyContent: "center"}}> {element} </div>
+      <div style={{display: "flex", justifyContent: "center"}}> <UnityHandler identifier= {activeBuild}></UnityHandler> </div>
 
     
     </div>
