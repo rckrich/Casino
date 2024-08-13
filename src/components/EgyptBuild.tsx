@@ -10,10 +10,10 @@ export const EgyptBuild = forwardRef((props, ref) => {
     unload,
     requestFullscreen,
   } = useUnityContext({
-    loaderUrl: "/unitybuild/Egypt.loader.js",
-    dataUrl: "/unitybuild/Egypt.data",
-    frameworkUrl: "/unitybuild/Egypt.framework.js",
-    codeUrl: "/unitybuild/Egypt.wasm",
+    loaderUrl: "/unitybuild/Egypt/Egypt.loader.js",
+    dataUrl: "/unitybuild/Egypt/Egypt.data",
+    frameworkUrl: "/unitybuild/Egypt/Egypt.framework.js",
+    codeUrl: "/unitybuild/Egypt/Egypt.wasm",
   });
 
   const handleClickFullscreen = () => {

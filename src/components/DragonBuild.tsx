@@ -10,10 +10,10 @@ export const DragonBuild = forwardRef((props, ref) => {
     unload,
     requestFullscreen,
   } = useUnityContext({
-    loaderUrl: "/unitybuild/Egypt.loader.js",
-    dataUrl: "/unitybuild/Egypt.data",
-    frameworkUrl: "/unitybuild/Egypt.framework.js",
-    codeUrl: "/unitybuild/Egypt.wasm",
+    loaderUrl: "/unitybuild/Dragon/Dragon.loader.js",
+    dataUrl: "/unitybuild/Dragon/Dragon.data",
+    frameworkUrl: "/unitybuild/Dragon/Dragon.framework.js",
+    codeUrl: "/unitybuild/Dragon/Dragon.wasm",
   });
 
   const handleClickFullscreen = () => {
