@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { EgyptBuild } from "./EgyptBuild";
 import { DragonBuild } from "./DragonBuild";
+import { IrelandBuild } from "./IrelandBuild";
 
 interface ContentProps {
   identifier: number;
@@ -9,6 +10,7 @@ interface ContentProps {
 export const UnityHandler: React.FC<ContentProps> = ({ identifier }) => {
   const egyptBuildRef = useRef<{ unloadBuild: () => Promise<void> }>(null);
   const dragonBuildRef = useRef<{ unloadBuild: () => Promise<void> }>(null);
+  const irelandBuildRef = useRef<{ unloadBuild: () => Promise<void> }>(null);
   const myDataRef = useRef<number | null>(null);
   const firstTimeRef = useRef<Boolean | null>(false);
 
@@ -28,6 +30,13 @@ export const UnityHandler: React.FC<ContentProps> = ({ identifier }) => {
                 }
             }
         }
+        if (irelandBuildRef.current && firstTimeRef.current) {
+          if (irelandBuildRef.current) {
+              if(myDataRef.current === 3){
+                irelandBuildRef.current.unloadBuild();
+              }
+          }
+      }
     }
 
 
@@ -41,6 +50,12 @@ export const UnityHandler: React.FC<ContentProps> = ({ identifier }) => {
     myDataRef.current = identifier;
     firstTimeRef.current = true;
     return <DragonBuild ref={dragonBuildRef} />;
+  }
+
+  if (identifier === 3) {
+    myDataRef.current = identifier;
+    firstTimeRef.current = true;
+    return <IrelandBuild ref={irelandBuildRef} />;
   }
 
   return <div></div>;
