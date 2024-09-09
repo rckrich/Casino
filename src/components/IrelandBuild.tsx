@@ -10,10 +10,10 @@ export const IrelandBuild = forwardRef((props, ref) => {
     unload,
     requestFullscreen,
   } = useUnityContext({
-    loaderUrl: "/unitybuild/Ireland/CasinoBuilds.loader.js",
-    dataUrl: "/unitybuild/Ireland/CasinoBuilds.data",
-    frameworkUrl: "/unitybuild/Ireland/CasinoBuilds.framework.js",
-    codeUrl: "/unitybuild/Ireland/CasinoBuilds.wasm",
+    loaderUrl: "/unitybuild/Ireland/Ireland.loader.js",
+    dataUrl: "/unitybuild/Ireland/Ireland.data",
+    frameworkUrl: "/unitybuild/Ireland/Ireland.framework.js",
+    codeUrl: "/unitybuild/Ireland/Ireland.wasm",
   });
 
   const handleClickFullscreen = () => {
