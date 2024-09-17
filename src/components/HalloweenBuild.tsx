@@ -10,10 +10,10 @@ export const HalloweenBuild = forwardRef((props, ref) => {
     unload,
     requestFullscreen,
   } = useUnityContext({
-    loaderUrl: "/unitybuild/Halloween/Halloween.loader.js",
-    dataUrl: "/unitybuild/Halloween/Halloween.data",
-    frameworkUrl: "/unitybuild/Halloween/Halloween.framework.js",
-    codeUrl: "/unitybuild/Halloween/Halloween.wasm",
+    loaderUrl: "/unitybuild/Halloween/halloween.loader.js",
+    dataUrl: "/unitybuild/Halloween/halloween.data",
+    frameworkUrl: "/unitybuild/Halloween/halloween.framework.js",
+    codeUrl: "/unitybuild/Halloween/halloween.wasm",
   });
 
   const handleClickFullscreen = () => {
