@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { EgyptBuild } from "./EgyptBuild";
 import { DragonBuild } from "./DragonBuild";
 import { IrelandBuild } from "./IrelandBuild";
 import { PoseidonBuild } from "./PoseidonBuild";
+import { HalloweenBuild } from "./HalloweenBuild";
 
 interface ContentProps {
   identifier: number;
@@ -13,6 +14,7 @@ export const UnityHandler: React.FC<ContentProps> = ({ identifier }) => {
   const dragonBuildRef = useRef<{ unloadBuild: () => Promise<void> }>(null);
   const irelandBuildRef = useRef<{ unloadBuild: () => Promise<void> }>(null);
   const PoseidonBuildRef = useRef<{ unloadBuild: () => Promise<void> }>(null);
+  const HalloweenBuildRef = useRef<{ unloadBuild: () => Promise<void> }>(null);
   const myDataRef = useRef<number | null>(null);
   const firstTimeRef = useRef<Boolean | null>(false);
 
@@ -47,6 +49,14 @@ export const UnityHandler: React.FC<ContentProps> = ({ identifier }) => {
               }
           }
         }
+
+        if (HalloweenBuildRef.current && firstTimeRef.current) {
+          if (HalloweenBuildRef.current) {
+              if(myDataRef.current === 5){
+                HalloweenBuildRef.current.unloadBuild();
+              }
+          }
+        }
     }
 
 
@@ -72,6 +82,12 @@ export const UnityHandler: React.FC<ContentProps> = ({ identifier }) => {
     myDataRef.current = identifier;
     firstTimeRef.current = true;
     return <PoseidonBuild ref={PoseidonBuildRef} />;
+  }
+
+  if (identifier === 5) {
+    myDataRef.current = identifier;
+    firstTimeRef.current = true;
+    return <HalloweenBuild ref={HalloweenBuildRef} />;
   }
 
   return <div></div>;

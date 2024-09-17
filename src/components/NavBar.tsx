@@ -31,6 +31,7 @@ export const NavBar = () => {
                 <Dropdown.Item onClick={() => setActiveBuild(2)}>Dragon</Dropdown.Item>
                 <Dropdown.Item onClick={() => setActiveBuild(3)}>Ireland</Dropdown.Item>
                 <Dropdown.Item onClick={() => setActiveBuild(4)}>Poseidon</Dropdown.Item>
+                <Dropdown.Item onClick={() => setActiveBuild(5)}>Halloween</Dropdown.Item>
                 </DropdownButton>
             </Nav>
             <span className="navbar-text">
